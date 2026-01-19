@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f2f5;
+        }
+
+        .container {
+            display: flex;
+            width: 800px;
+            max-width: 90%;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .login-left, .login-right {
+            padding: 50px;
+            flex: 1;
+        }
+
+        /* Left Side - Form */
+        .login-left h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .login-left p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .login-left input[type="text"],
+        .login-left input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .login-left input[type="text"]:focus,
+        .login-left input[type="password"]:focus {
+            outline: none;
+            border-color: #6a11cb;
+            box-shadow: 0 0 8px rgba(106,17,203,0.2);
+        }
+
+        .login-left .btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .login-left .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .login-left .forgot {
+            display: block;
+            text-align: right;
+            margin-bottom: 20px;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Right Side - Welcome */
+        .login-right {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .login-right h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .login-right p {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .login-right .signup-btn {
+            padding: 12px 30px;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            background: transparent;
+            color: #fff;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .login-right .signup-btn:hover {
+            background: #fff;
+            color: #ff416c;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .login-left, .login-right {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Side: Login Form -->
+    <div class="login-left">
+        <h2>Admin Login</h2>
+        <p>Sign in to your account</p>
+        <form action="./adminLogin" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Right Side: Welcome -->
+    <div class="login-right">
+        <h2>Hello, Admin!</h2>
+        <p>Enter your personal details and start your admin session</p>
+        <a href="index.html" class="signup-btn">Go Back</a>
+    </div>
+</div>
+
+</body>
+</html>
